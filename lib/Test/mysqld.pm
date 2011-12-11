@@ -57,7 +57,7 @@ sub new {
         $self->mysql_install_db($prog);
     }
     if (! defined $self->mysqld) {
-        my $prog = _find_program(qw/mysqld bin libexec sbin/)
+        my $prog = _find_program(qw! mysqld bin libexec sbin usr/sbin !)
             or return;
         $self->mysqld($prog);
     }
